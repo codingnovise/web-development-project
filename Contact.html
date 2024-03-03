@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+
+<html lang="en">
+    <head>
+        <!--creating the HTML settings and title-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact</title>
+        
+        <link rel="stylesheet" href="styles.css">
+        
+
+
+    </head>
+
+    <body>
+        <!--Setting the banner and navbar for the page-->
+        <div class="banner">
+                
+            <div class="navbar">
+                <h1 class="font-effect-emboss">Contact Me</h1>
+                    <ul>
+                        <li> <a href="Home.html">Home</a></li>
+                        <li> <a href="About.html">About</a></li>
+                        <li> <a href="Contact.html">Contact</a></li>
+                    </ul>
+            </div>
+            <!--Setting the contact settings for the page-->
+            <div class="contact">
+                
+                <script type="text/javascript" src="contact.js"></script>
+
+
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" id="name" placeholder="Name">
+
+                    <br>
+
+                    <input type="email" id="email" placeholder="Email">
+
+                    <br>
+
+                    <textarea id="message" placeholder="Message"></textarea>
+
+                    <br>
+
+                    <button type="submit">Send</button>
+
+                </form>
+                
+            </div>
+
+            
+        </div>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                Host : "smtp.gmail.com",
+                Username : "stuff3146@gmail.com",
+                Password : "Stuff-3146!",
+                To : 'stuff3146@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "Name: " + document.getElementById("name").value
+                        + "<br> Email: " + document.getElementById("email").value
+                        + "<br> Message: " + document.getElementById("message").value
+            }).then(
+              message => alert("Message Sent Successfully")
+            );
+        }
+
+
+        </script> 
+
+    </body>
+
+
+</html>
