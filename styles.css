@@ -9,7 +9,7 @@
 .banner{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url(media/Paint-Galaxy.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url(Paint-Galaxy.jpeg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
