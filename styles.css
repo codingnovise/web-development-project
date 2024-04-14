@@ -8,7 +8,7 @@
 
 .banner{
     width: 100%;
-    height: 100vh;
+    height: 300vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url(Paint-Galaxy.jpeg);
     background-size: cover;
     background-attachment: fixed;
@@ -67,6 +67,7 @@
 .about{
     padding: 5%;
     display: flex;
+    margin-left: 5%;
     
 }
 .about p{
@@ -75,15 +76,106 @@
     
 }
 .image{
-    display: right;   
+    display: right;  
+    margin-left: 10%; 
+    
 }
-.arts{
+
+
+
+
+.slideshow{
     padding: 5%;
     display: flex;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 10%;
+
 }
-.arts p{
-    text-align: center;
+.slideshow-content{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
 }
+.mySlides {
+    position: absolute;
+    display: flex;
+  }
+
+.mySlides img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* Next & previous buttons */
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 10%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+  }
+.buttons button{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+
+} 
+
+  /* The dots/bullets/indicators */
+  .dots {
+    position: absolute;
+    bottom: 5%;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+  }
+  .dots li{
+    list-style: none;
+    width: 5%;
+    height: 5%;
+    background-color: #fff;
+    margin: 10%;
+    border-radius: 20px;
+  }
+
+  .dots li.active{
+    width: 30px;
+    
+  }
+  .active, .dots:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+
 .contact{
     width: 90%;
     padding: 5%;
@@ -121,4 +213,10 @@ form button{
     width: 150px;
     margin: 20px auto 0;
     border-radius: 20px;
+}
+.secret a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
