@@ -69,7 +69,7 @@
                 Subject : "New Contact Form Enquiry",
                 Body : "Name: " + document.getElementsByName("name").value
                         + "<br> Email: " + document.getElementsByName("email").value
-                        + "<br> Message: " + document.getElementByN("message").value
+                        + "<br> Message: " + document.getElementsByName("message").value
             }).then(
               message => alert("Message Sent Successfully")
             );
